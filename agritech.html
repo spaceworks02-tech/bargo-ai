@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>농업 & 유통 — 바르고 AI</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700;900&family=Space+Grotesk:wght@300;400;700&display=swap');
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --black: #000; --yellow: #CCFF00; --white: #F5F5F0; --gray: #444440; --gray-light: #888880; --yellow-dim: rgba(204,255,0,0.06); }
+    html { scroll-behavior: smooth; }
+    body { background: var(--black); color: var(--white); font-family: 'Noto Sans KR', sans-serif; overflow-x: hidden; }
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; justify-content: space-between; align-items: center; padding: 20px 48px; background: rgba(0,0,0,0.95); border-bottom: 1px solid var(--gray); backdrop-filter: blur(12px); }
+    .nav-back { display: flex; align-items: center; gap: 10px; color: var(--gray-light); text-decoration: none; font-size: 13px; letter-spacing: 0.08em; transition: color 0.2s; }
+    .nav-back:hover { color: var(--yellow); }
+    .nav-logo { font-family: 'Space Grotesk', sans-serif; font-size: 18px; font-weight: 700; }
+    .nav-logo span { color: var(--yellow); }
+    .nav-cta { padding: 10px 24px; border: 1px solid var(--gray); color: var(--white); text-decoration: none; font-size: 13px; letter-spacing: 0.08em; transition: all 0.25s; }
+    .nav-cta:hover { border-color: var(--yellow); color: var(--yellow); }
+    #hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: flex-end; padding: 0 48px 80px; border-bottom: 1px solid var(--gray); }
+    .hero-industry { font-family: 'Space Grotesk', sans-serif; font-size: 11px; letter-spacing: 0.2em; color: var(--yellow); text-transform: uppercase; margin-bottom: 24px; }
+    .hero-title { font-size: clamp(48px, 7vw, 110px); font-weight: 900; line-height: 1.05; letter-spacing: -0.03em; margin-bottom: 40px; }
+    .hero-title em { font-style: normal; color: var(--yellow); }
+    .hero-desc { font-size: 18px; color: var(--gray-light); max-width: 560px; line-height: 1.8; margin-bottom: 48px; font-weight: 300; }
+    .btn-primary { display: inline-block; padding: 16px 40px; background: var(--yellow); color: #000; font-weight: 700; font-size: 14px; letter-spacing: 0.05em; text-decoration: none; transition: opacity 0.2s; }
+    .btn-primary:hover { opacity: 0.85; }
+    section { padding: 120px 48px; border-bottom: 1px solid var(--gray); }
+    .section-label { font-family: 'Space Grotesk', sans-serif; font-size: 11px; letter-spacing: 0.2em; color: var(--yellow); text-transform: uppercase; margin-bottom: 56px; }
+    .section-title { font-size: clamp(28px, 3.5vw, 48px); font-weight: 900; letter-spacing: -0.03em; margin-bottom: 48px; line-height: 1.2; }
+    .problems-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--gray); }
+    .problem-card { background: var(--black); padding: 48px 36px; }
+    .problem-num { font-family: 'Space Grotesk', sans-serif; font-size: 11px; color: var(--yellow); letter-spacing: 0.15em; margin-bottom: 24px; }
+    .problem-title { font-size: 18px; font-weight: 700; margin-bottom: 12px; }
+    .problem-body { font-size: 14px; color: var(--gray-light); line-height: 1.9; }
+    .solution-list { display: flex; flex-direction: column; }
+    .solution-item { display: grid; grid-template-columns: 60px 1fr 1fr; gap: 48px; padding: 48px 0; border-top: 1px solid var(--gray); align-items: start; }
+    .solution-item:last-child { border-bottom: 1px solid var(--gray); }
+    .solution-num { font-family: 'Space Grotesk', sans-serif; font-size: 11px; color: var(--yellow); letter-spacing: 0.15em; padding-top: 4px; }
+    .solution-name { font-size: 20px; font-weight: 700; letter-spacing: -0.02em; }
+    .solution-body { font-size: 14px; color: var(--gray-light); line-height: 1.9; }
+    .product-spotlight { background: var(--yellow-dim); border: 1px solid rgba(204,255,0,0.2); padding: 64px 56px; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+    .spotlight-label { font-family: 'Space Grotesk', sans-serif; font-size: 10px; letter-spacing: 0.2em; color: var(--yellow); text-transform: uppercase; margin-bottom: 16px; }
+    .spotlight-name { font-size: clamp(36px, 4vw, 56px); font-weight: 900; letter-spacing: -0.03em; margin-bottom: 8px; }
+    .spotlight-sub { font-family: 'Space Grotesk', sans-serif; font-size: 14px; color: var(--yellow); letter-spacing: 0.1em; margin-bottom: 24px; }
+    .spotlight-desc { font-size: 15px; color: var(--gray-light); line-height: 1.9; }
+    .spotlight-stats { display: flex; flex-direction: column; gap: 32px; }
+    .spotlight-stat-num { font-family: 'Space Grotesk', sans-serif; font-size: 56px; font-weight: 700; letter-spacing: -0.04em; color: var(--yellow); line-height: 1; }
+    .spotlight-stat-label { font-size: 13px; color: var(--gray-light); margin-top: 4px; }
+    #cta { text-align: center; padding: 160px 48px; }
+    .cta-title { font-size: clamp(36px, 5vw, 72px); font-weight: 900; letter-spacing: -0.03em; line-height: 1.1; margin-bottom: 48px; }
+    .cta-title em { font-style: normal; color: var(--yellow); display: block; }
+    footer { padding: 36px 48px; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--gray); }
+    .footer-logo { font-family: 'Space Grotesk', sans-serif; font-size: 16px; font-weight: 700; }
+    .footer-logo span { color: var(--yellow); }
+    .footer-info { font-size: 12px; color: var(--gray-light); text-align: right; line-height: 1.8; }
+    .reveal { opacity: 0; transform: translateY(32px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    @media (max-width: 768px) {
+      nav { padding: 16px 24px; }
+      #hero { padding: 100px 24px 64px; }
+      section { padding: 80px 24px; }
+      .problems-grid { grid-template-columns: 1fr; }
+      .solution-item { grid-template-columns: 48px 1fr; gap: 20px; }
+      .solution-body { grid-column: 2; }
+      .product-spotlight { grid-template-columns: 1fr; gap: 40px; padding: 40px 28px; }
+      #cta { padding: 100px 24px; }
+      footer { flex-direction: column; gap: 16px; text-align: center; padding: 28px 24px; }
+      .footer-info { text-align: center; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html" class="nav-back">← 바르고 AI</a>
+    <div class="nav-logo">BARGO<span>_AI</span></div>
+    <a href="https://forms.gle/xmXeqCbcqA3C251c7" target="_blank" class="nav-cta">상담 신청 →</a>
+  </nav>
+
+  <section id="hero">
+    <div class="hero-industry">Industry — AgriTech</div>
+    <h1 class="hero-title">농업을<br><em>데이터로 재배합니다.</em></h1>
+    <p class="hero-desc">눈대중과 경험에 의존하던 재배 판단을<br>AI가 이미지와 환경 데이터로 정밀하게 대체합니다.</p>
+    <a href="https://forms.gle/xmXeqCbcqA3C251c7" target="_blank" class="btn-primary">무료 상담 신청 →</a>
+  </section>
+
+  <section>
+    <div class="section-label">Pain Points</div>
+    <h2 class="section-title reveal">농업·유통이 겪는 문제들</h2>
+    <div class="problems-grid">
+      <div class="problem-card reveal">
+        <div class="problem-num">01</div>
+        <div class="problem-title">생육 환경 판단의 한계</div>
+        <p class="problem-body">온도·습도·일조량을 사람이 직접 보고 판단하는 방식은 오차가 크고 규모 확장이 어렵습니다.</p>
+      </div>
+      <div class="problem-card reveal reveal-delay-1">
+        <div class="problem-num">02</div>
+        <div class="problem-title">병해충 조기 발견 실패</div>
+        <p class="problem-body">육안 점검만으로는 병해충 초기 징후를 놓치기 쉽고, 발견 시엔 이미 피해가 확산된 후입니다.</p>
+      </div>
+      <div class="problem-card reveal reveal-delay-2">
+        <div class="problem-num">03</div>
+        <div class="problem-title">유통 수급 불일치</div>
+        <p class="problem-body">수확량 예측 실패로 과잉 공급 또는 물량 부족이 반복되어 가격 변동성이 커집니다.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-label">Solutions</div>
+    <h2 class="section-title reveal">바르고 AI의 해답</h2>
+    <div class="solution-list">
+      <div class="solution-item reveal">
+        <div class="solution-num">01</div>
+        <div class="solution-name">멀티모달 생육 분석</div>
+        <div class="solution-body">카메라 이미지와 센서 데이터를 동시에 분석해 작물 상태를 실시간으로 평가하고 최적 재배 조건을 추천합니다.</div>
+      </div>
+      <div class="solution-item reveal">
+        <div class="solution-num">02</div>
+        <div class="solution-name">AI 병해충 조기 탐지</div>
+        <div class="solution-body">이미지 AI가 육안으로 보이지 않는 초기 병징을 감지하고 즉시 알림을 전송합니다.</div>
+      </div>
+      <div class="solution-item reveal">
+        <div class="solution-num">03</div>
+        <div class="solution-name">수확량 예측 & 유통 연동</div>
+        <div class="solution-body">생육 데이터를 기반으로 수확 시점과 물량을 예측해 유통 계획을 사전에 수립합니다.</div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-label">납품 제품</div>
+    <div class="product-spotlight reveal">
+      <div>
+        <div class="spotlight-label">실제 납품 완료</div>
+        <div class="spotlight-name">RockFine</div>
+        <div class="spotlight-sub">AI</div>
+        <p class="spotlight-desc">농업용 멀티모달 작물 생육 환경 추천 시스템.<br>이미지와 환경 데이터를 동시에 분석해 최적의 재배 조건을 데이터로 제안합니다.<br><br>스마트팜 현장에 실제 납품·운영 중인 제품입니다.</p>
+      </div>
+      <div class="spotlight-stats">
+        <div>
+          <div class="spotlight-stat-num">멀티모달</div>
+          <div class="spotlight-stat-label">이미지 + 환경센서 동시 분석</div>
+        </div>
+        <div>
+          <div class="spotlight-stat-num">실시간</div>
+          <div class="spotlight-stat-label">생육 환경 모니터링</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="cta">
+    <div class="cta-title reveal">우리 농장에도<em>적용할 수 있을까요?</em></div>
+    <a href="https://forms.gle/xmXeqCbcqA3C251c7" target="_blank" class="btn-primary" style="font-size:16px; padding:20px 56px;">무료 상담 신청 →</a>
+  </section>
+
+  <footer>
+    <div class="footer-logo">BARGO<span>_AI</span></div>
+    <div class="footer-info">주식회사 바르고 · 경상남도 김해시 관동로 14<br>© 2026 Bargo Inc.</div>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
