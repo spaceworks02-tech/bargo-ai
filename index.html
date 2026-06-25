@@ -659,6 +659,33 @@
       .step-num { margin-bottom: -16px; }
     }
 
+    /* 맨위로 버튼 */
+    #top-btn {
+      position: fixed;
+      bottom: 36px;
+      right: 36px;
+      width: 48px;
+      height: 48px;
+      background: var(--yellow);
+      color: #000;
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 200;
+      opacity: 0;
+      transform: translateY(16px);
+      transition: opacity 0.3s, transform 0.3s;
+      pointer-events: none;
+    }
+    #top-btn.visible {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+    #top-btn:hover { background: #fff; }
+
     /* 스크롤 reveal */
     .reveal {
       opacity: 0;
@@ -679,6 +706,8 @@
 
   <div id="cursor"></div>
   <div id="cursor-ring"></div>
+
+  <div id="top-btn" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</div>
 
   <!-- 네비게이션 -->
   <nav>
@@ -1043,6 +1072,12 @@
       requestAnimationFrame(drawSignal);
     }
     drawSignal();
+
+    // 맨위로 버튼
+    const topBtn = document.getElementById('top-btn');
+    window.addEventListener('scroll', () => {
+      topBtn.classList.toggle('visible', window.scrollY > 400);
+    });
 
     // 스크롤 reveal
     const observer = new IntersectionObserver(entries => {
