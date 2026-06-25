@@ -567,6 +567,8 @@
       nav {
         padding: 20px 24px;
       }
+      nav div { gap: 4px; }
+      nav a[href="#services"], nav a[href="#approach"] { display: none; }
 
       #hero {
         padding: 0 24px 64px;
@@ -678,7 +680,12 @@
   <!-- 네비게이션 -->
   <nav>
     <div class="nav-logo">BARGO<span>_AI</span></div>
-    <a href="#cta" class="nav-cta">문의하기 →</a>
+    <div style="display:flex; gap:16px; align-items:center;">
+      <a href="#services" class="nav-cta" style="border:none; padding:10px 16px;">솔루션</a>
+      <a href="#products" class="nav-cta" style="border:none; padding:10px 16px;">제품</a>
+      <a href="#approach" class="nav-cta" style="border:none; padding:10px 16px;">프로세스</a>
+      <a href="https://forms.gle/xmXeqCbcqA3C251c7" target="_blank" class="nav-cta">상담 신청 →</a>
+    </div>
   </nav>
 
   <!-- 히어로 -->
