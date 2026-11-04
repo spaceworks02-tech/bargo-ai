@@ -3,6 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="귀사의 데이터와 프로세스를 이해한 뒤 오직 귀사만을 위한 AI를 설계합니다. AI 전략 컨설팅, 맞춤형 모델 개발, 업무 자동화, 그리고 실제 운영 중인 바르고 AI 제품들.">
+  <link rel="canonical" href="https://ai.bargo2023.co.kr/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="바르고 AI">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:title" content="바르고 AI — 귀사만을 위한 인공지능">
+  <meta property="og:description" content="귀사의 데이터와 프로세스를 이해한 뒤 오직 귀사만을 위한 AI를 설계합니다. AI 전략 컨설팅, 맞춤형 모델 개발, 업무 자동화, 그리고 실제 운영 중인 바르고 AI 제품들.">
+  <meta property="og:url" content="https://ai.bargo2023.co.kr/">
+  <meta property="og:image" content="https://ai.bargo2023.co.kr/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="바르고 AI — 귀사만을 위한 인공지능">
+  <meta name="twitter:description" content="귀사의 데이터와 프로세스를 이해한 뒤 오직 귀사만을 위한 AI를 설계합니다. AI 전략 컨설팅, 맞춤형 모델 개발, 업무 자동화, 그리고 실제 운영 중인 바르고 AI 제품들.">
+  <meta name="twitter:image" content="https://ai.bargo2023.co.kr/og.png">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="favicon.ico" sizes="32x32">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <title>바르고 AI — 귀사만을 위한 인공지능</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700;900&family=Space+Grotesk:wght@300;400;700&display=swap');
@@ -382,6 +400,9 @@
       letter-spacing: 0.1em;
       margin-bottom: 24px;
     }
+    .product-link { color: inherit; text-decoration: none; transition: color 0.2s; }
+    .product-link:hover { color: var(--yellow); }
+    .product-link-arrow { font-size: 0.55em; color: var(--yellow); vertical-align: super; }
     .product-desc {
       font-size: 14px;
       color: var(--gray-light);
@@ -492,11 +513,13 @@
       align-items: center;
       padding: 32px 0;
       border-top: 1px solid var(--gray);
-      cursor: default;
+      cursor: pointer;
+      color: inherit;
+      text-decoration: none;
       transition: padding-left 0.3s;
     }
-    .industry-item:hover { padding-left: 20px; }
-    .industry-item:last-child { border-bottom: 1px solid var(--gray); }
+    .industry-item:hover, .industry-item:focus-visible { padding-left: 20px; }
+    .industry-list li:last-child .industry-item { border-bottom: 1px solid var(--gray); }
     .industry-name {
       font-size: clamp(20px, 2.5vw, 32px);
       font-weight: 700;
@@ -650,6 +673,12 @@
       .scroll-hint { display: none; }
     }
 
+    /* 터치 기기: 기본 커서 사용 */
+    @media (hover: none), (pointer: coarse) {
+      body { cursor: auto; }
+      #cursor, #cursor-ring { display: none; }
+    }
+
     @media (max-width: 480px) {
       .stats-grid {
         grid-template-columns: 1fr;
@@ -675,6 +704,9 @@
       align-items: center;
       justify-content: center;
       cursor: pointer;
+      border: none;
+      padding: 0;
+      font-family: inherit;
       z-index: 200;
       opacity: 0;
       transform: translateY(16px);
@@ -702,6 +734,16 @@
     .reveal-delay-2 { transition-delay: 0.2s; }
     .reveal-delay-3 { transition-delay: 0.3s; }
     .reveal-delay-4 { transition-delay: 0.4s; }
+
+    .footer-info a { color: inherit; text-decoration: none; border-bottom: 1px solid var(--gray); transition: color 0.2s, border-color 0.2s; }
+    .footer-info a:hover { color: var(--yellow); border-color: var(--yellow); }
+    footer { flex-wrap: wrap; row-gap: 24px; }
+    .footer-sites { width: 100%; padding-top: 20px; border-top: 1px solid #222220; font-family: 'Space Grotesk', 'Noto Sans KR', sans-serif; font-size: 12px; letter-spacing: 0.06em; color: var(--gray); line-height: 2; }
+    .footer-sites .fs-label { color: var(--gray-light); }
+    .footer-sites a { color: var(--gray-light); text-decoration: none; transition: color 0.2s; }
+    .footer-sites a:hover { color: var(--white); }
+    .footer-sites .fs-current { color: var(--yellow); }
+    @media (max-width: 768px) { .footer-sites { text-align: center; } }
   </style>
 </head>
 <body>
@@ -709,7 +751,7 @@
   <div id="cursor"></div>
   <div id="cursor-ring"></div>
 
-  <div id="top-btn" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</div>
+  <button id="top-btn" type="button" aria-label="맨 위로" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
 
   <!-- 네비게이션 -->
   <nav>
@@ -745,7 +787,7 @@
 
   <!-- 선언문 -->
   <section id="manifesto">
-    <div class="section-number">00 — 철학</div>
+    <div class="section-number">01 — 철학</div>
     <p class="manifesto-text reveal">
       우리는 AI를 판매하지 않습니다.<br>
       귀사의 문제를 함께 정의하고,<br>
@@ -757,6 +799,7 @@
 
   <!-- 서비스 -->
   <section id="services">
+    <div class="section-number">02 — 솔루션</div>
     <div class="services-header">
       <h2 class="services-title reveal">
         무엇을<br>할 수 있나요
@@ -808,6 +851,7 @@
 
   <!-- 납품 제품 -->
   <section id="products">
+    <div class="section-number">03 — 제품</div>
     <div class="products-header">
       <h2 class="products-title reveal">
         살아있는<br>AI들
@@ -822,12 +866,12 @@
       <div class="product-card reveal">
         <div class="product-card-top">
           <span class="product-badge">출시 완료</span>
-          <span class="product-type">LLM · 수요예측</span>
+          <span class="product-type">시계열 ML · 수요예측</span>
         </div>
         <div class="product-name">Prodic</div>
         <div class="product-name-sub">AI</div>
         <p class="product-desc">
-          LLM 기반 수요예측 및 자동 발주 시스템.<br>
+          시계열·머신러닝 기반 수요예측 및 자동 발주 시스템.<br>
           복잡한 유통·물류 데이터를 분석해<br>
           정확한 물량을 자동으로 예측하고 발주합니다.
         </p>
@@ -884,7 +928,7 @@
           <span class="product-badge live">v1.2 릴리스</span>
           <span class="product-type">영상 · 음성 AI</span>
         </div>
-        <div class="product-name">Bargo Cut</div>
+        <div class="product-name"><a class="product-link" href="https://apps.bargo2023.co.kr/#apps" target="_blank" rel="noopener">Bargo Cut <span class="product-link-arrow">↗</span></a></div>
         <div class="product-name-sub">AI</div>
         <p class="product-desc">
           자동 자막·한↔영 번역·AI 더빙까지 한 번에 처리하는<br>
@@ -899,7 +943,7 @@
           <span class="product-badge live">서비스 중</span>
           <span class="product-type">음성 AI · 농업</span>
         </div>
-        <div class="product-name">말로 쓰는 영농일지</div>
+        <div class="product-name"><a class="product-link" href="https://m.onestore.co.kr/v2/ko-kr/app/0001007108" target="_blank" rel="noopener">말로 쓰는 영농일지 <span class="product-link-arrow">↗</span></a></div>
         <div class="product-name-sub">AI</div>
         <p class="product-desc">
           말 한마디로 영농일지를 자동 작성하는<br>
@@ -969,7 +1013,7 @@
   <!-- 접근 방식 -->
   <section id="approach">
     <div class="approach-header">
-      <div class="section-number">02 — 프로세스</div>
+      <div class="section-number">04 — 프로세스</div>
       <h2 class="approach-title reveal">우리의 방식</h2>
     </div>
     <div class="approach-steps">
@@ -1014,29 +1058,29 @@
 
   <!-- 산업 -->
   <section id="industries">
-    <div class="section-number">03 — 적용 분야</div>
+    <div class="section-number">05 — 적용 분야</div>
     <h2 class="industries-title reveal">어떤 분야든</h2>
     <ul class="industry-list">
-      <li class="industry-item reveal" onclick="location.href='manufacturing.html'" style="cursor:pointer;">
+      <li><a class="industry-item reveal" href="manufacturing.html">
         <span class="industry-name">제조 & 생산</span>
         <span class="industry-tag">Manufacturing</span>
         <span class="industry-arrow">→</span>
-      </li>
-      <li class="industry-item reveal reveal-delay-1" onclick="location.href='agritech.html'" style="cursor:pointer;">
+      </a></li>
+      <li><a class="industry-item reveal reveal-delay-1" href="agritech.html">
         <span class="industry-name">농업 & 유통</span>
         <span class="industry-tag">AgriTech</span>
         <span class="industry-arrow">→</span>
-      </li>
-      <li class="industry-item reveal reveal-delay-2" onclick="location.href='commerce.html'" style="cursor:pointer;">
+      </a></li>
+      <li><a class="industry-item reveal reveal-delay-2" href="commerce.html">
         <span class="industry-name">이커머스 & 리테일</span>
         <span class="industry-tag">Commerce</span>
         <span class="industry-arrow">→</span>
-      </li>
-      <li class="industry-item reveal reveal-delay-3" onclick="location.href='marketing.html'" style="cursor:pointer;">
+      </a></li>
+      <li><a class="industry-item reveal reveal-delay-3" href="marketing.html">
         <span class="industry-name">마케팅 & 콘텐츠</span>
         <span class="industry-tag">Marketing</span>
         <span class="industry-arrow">→</span>
-      </li>
+      </a></li>
     </ul>
   </section>
 
@@ -1056,8 +1100,16 @@
   <footer>
     <div class="footer-logo">BARGO<span>_AI</span></div>
     <div class="footer-info">
-      주식회사 바르고 · 경상남도 김해시 관동로 14<br>
-      s.kim@bargo.store · © 2026 Bargo Inc.
+      주식회사 바르고 · 대표 김선아 · 경상남도 김해시 관동로 14<br>
+      <a href="mailto:m.kim@bargo.store">m.kim@bargo.store</a> · © 2026 Bargo Inc.
+    </div>
+    <div class="footer-sites">
+      <span class="fs-label">BARGO 사이트</span> ·
+      <a href="https://apps.bargo2023.co.kr">앱·게임</a> ·
+      <a href="https://books.bargo2023.co.kr">책</a> ·
+      <a href="https://webtoon.bargo2023.co.kr">웹툰</a> ·
+      <a href="https://drama.bargo2023.co.kr">드라마</a> ·
+      <a href="https://ai.bargo2023.co.kr" class="fs-current" aria-current="page">AI</a>
     </div>
   </footer>
 
