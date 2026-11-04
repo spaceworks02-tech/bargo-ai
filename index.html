@@ -441,6 +441,14 @@
     }
     .product-card:hover .product-glyph { color: rgba(204,255,0,0.09); }
 
+    /* 구축사례 */
+    #cases { background: #000; padding: 140px 48px; }
+    .case-client { font-size: 13px; font-weight: 700; color: var(--yellow); letter-spacing: 0.02em; margin-bottom: 14px; }
+    .case-rows { display: grid; grid-template-columns: max-content 1fr; gap: 10px 18px; margin: 0; font-size: 14px; line-height: 1.75; }
+    .case-rows dt { font-family: 'Space Grotesk', 'Noto Sans KR', sans-serif; font-size: 11px; letter-spacing: 0.12em; color: var(--yellow); padding-top: 4px; }
+    .case-rows dd { margin: 0; color: var(--gray-light); word-break: keep-all; }
+    @media (max-width: 768px) { #cases { padding: 80px 24px; } .case-rows { gap: 6px 12px; font-size: 13px; } }
+
     /* 통계 섹션 */
     #stats {
       background: var(--yellow);
@@ -778,6 +786,7 @@
     <div style="display:flex; gap:16px; align-items:center;">
       <a href="#services" class="nav-cta" style="border:none; padding:10px 16px;">솔루션</a>
       <a href="#products" class="nav-cta" style="border:none; padding:10px 16px;">제품</a>
+      <a href="#cases" class="nav-cta" style="border:none; padding:10px 16px;">구축사례</a>
       <a href="#approach" class="nav-cta" style="border:none; padding:10px 16px;">프로세스</a>
       <a href="https://forms.gle/xmXeqCbcqA3C251c7" target="_blank" class="nav-cta">상담 신청 →</a>
     </div>
@@ -871,13 +880,13 @@
 
   <!-- 납품 제품 -->
   <section id="products">
-    <div class="section-number">03 — 제품</div>
+    <div class="section-number">03 — 자체 제품</div>
     <div class="products-header">
       <h2 class="products-title reveal">
         살아있는<br>AI들
       </h2>
       <p class="products-subtitle reveal reveal-delay-2">
-        개념이 아닙니다.<br>실제로 납품하고 직접 운영 중인 AI들입니다.
+        개념이 아닙니다.<br>바르고가 직접 만들고 운영하는 AI들입니다.
       </p>
     </div>
 
@@ -916,15 +925,15 @@
 
       <div class="product-card reveal reveal-delay-2">
         <div class="product-card-top">
-          <span class="product-badge">납품 완료</span>
-          <span class="product-type">멀티모달 · 스마트팜</span>
+          <span class="product-badge">출시 완료</span>
+          <span class="product-type">시계열 · 관광 데이터</span>
         </div>
-        <div class="product-name">RockFine</div>
+        <div class="product-name">Festival Forecast</div>
         <div class="product-name-sub">AI</div>
         <p class="product-desc">
-          이미지와 환경 데이터를 동시에 분석하는<br>
-          농업용 멀티모달 작물 생육 추천 시스템.<br>
-          최적의 재배 조건을 데이터로 제안합니다.
+          Prodic AI의 예측 엔진을 관광 데이터로 확장한<br>
+          축제 흥행 예보 시스템.<br>
+          방문객 규모를 사전에 예측해 운영을 돕습니다.
         </p>
         <div class="product-glyph">03</div>
       </div>
@@ -976,48 +985,101 @@
 
       <div class="product-card reveal reveal-delay-2">
         <div class="product-card-top">
-          <span class="product-badge">납품 완료</span>
-          <span class="product-type">인지훈련 · 시니어 헬스케어</span>
+          <span class="product-badge live">시범 운영</span>
+          <span class="product-type">AI 추천 · 캠핑 커머스</span>
         </div>
-        <div class="product-name">하모니아 랜드</div>
-        <div class="product-name-sub">Harmonia Land</div>
+        <div class="product-name">캠상</div>
+        <div class="product-name-sub">Camp床</div>
         <p class="product-desc">
-          건축마을·연주마을 등 태블릿 인지훈련 게임의<br>
-          ms 단위 행동 기록으로 인지 활성화 지수(CVI)와 5대 인지 영역을 산출하고<br>
-          이상 징후는 조기 경보로 기관·보호자에게 알리는 시니어 인지케어 플랫폼.
+          캠핑장·날짜·인원을 입력하면<br>
+          경남 산지 K-BBQ 풀패키지를 실속·균형·프리미엄 3안으로 추천하고<br>
+          주문이 들어오면 산지 파트너에게 바로 발주를 넘기는 캠핑 직송 서비스.
         </p>
         <div class="product-glyph">07</div>
       </div>
 
-      <div class="product-card reveal reveal-delay-3">
-        <div class="product-card-top">
-          <span class="product-badge">출시 완료</span>
-          <span class="product-type">시계열 · 관광 데이터</span>
-        </div>
-        <div class="product-name">Festival Forecast</div>
-        <div class="product-name-sub">AI</div>
-        <p class="product-desc">
-          Prodic AI의 예측 엔진을 관광 데이터로 확장한<br>
-          축제 흥행 예보 시스템.<br>
-          방문객 규모를 사전에 예측해 운영을 돕습니다.
-        </p>
-        <div class="product-glyph">08</div>
-      </div>
+    </div>
+  </section>
 
-      <div class="product-card reveal">
+
+  <div class="divider"></div>
+
+  <!-- 구축사례 -->
+  <section id="cases">
+    <div class="section-number">04 — 구축사례</div>
+    <div class="products-header">
+      <h2 class="products-title reveal">
+        현장에서<br>함께 만든 AI
+      </h2>
+      <p class="products-subtitle reveal reveal-delay-2">
+        고객의 현장 문제를 함께 정의하고,<br>바르고가 설계·개발해 납품한 사례들입니다.
+      </p>
+    </div>
+
+    <div class="products-grid">
+
+      <div class="product-card case-card reveal">
         <div class="product-card-top">
           <span class="product-badge">납품 완료</span>
-          <span class="product-type">CBT · 청소년 상담 AI</span>
+          <span class="product-type">스마트팜 · 멀티모달</span>
         </div>
+        <div class="case-client">와송(주)농업회사법인</div>
+        <div class="product-name">RockFine</div>
+        <div class="product-name-sub">AI</div>
+        <dl class="case-rows">
+          <dt>과제</dt><dd>약용작물 와송(바위솔)의 재배 환경을 데이터로 관리</dd>
+          <dt>구축</dt><dd>온도·습도·CO₂·관수량으로 생육 높이와 건강 상태를 예측하는 머신러닝 엔진, 사진과 병해충 문헌으로 병징을 진단하는 이미지 RAG 엔진</dd>
+          <dt>결과</dt><dd>2026년 4월 납품 · 생육 높이 예측 오차(MAE) 4.14cm</dd>
+        </dl>
+        <div class="product-glyph">01</div>
+      </div>
+
+      <div class="product-card case-card reveal reveal-delay-1">
+        <div class="product-card-top">
+          <span class="product-badge">납품 완료</span>
+          <span class="product-type">시니어 헬스케어 · 인지훈련</span>
+        </div>
+        <div class="case-client">엄지하트케어</div>
+        <div class="product-name">하모니아 랜드</div>
+        <div class="product-name-sub">Harmonia Land</div>
+        <dl class="case-rows">
+          <dt>과제</dt><dd>시니어의 인지 상태를 놀이처럼 측정하고 변화를 조기에 발견</dd>
+          <dt>구축</dt><dd>건축마을·연주마을 등 태블릿 인지훈련 게임의 ms 단위 행동 기록으로 인지 활성화 지수(CVI)와 5대 인지 영역을 산출</dd>
+          <dt>결과</dt><dd>이상 징후를 기관·보호자에게 조기 경보로 알리는 인지케어 플랫폼 납품</dd>
+        </dl>
+        <div class="product-glyph">02</div>
+      </div>
+
+      <div class="product-card case-card reveal reveal-delay-2">
+        <div class="product-card-top">
+          <span class="product-badge">납품 완료</span>
+          <span class="product-type">청소년 상담 · CBT</span>
+        </div>
+        <div class="case-client">인제대학교 산학협력단</div>
         <div class="product-name">마음쌤 상담실</div>
         <div class="product-name-sub">Maumssam</div>
-        <div class="product-partner">인제대학교 산학협력단 공동 개발</div>
-        <p class="product-desc">
-          청소년이 관계 갈등 사연을 털어놓으면<br>
-          인지행동치료(CBT) 원리로 생각의 오류를 함께 짚고<br>
-          안전 판정과 교사 대시보드로 위기를 놓치지 않는 AI 상담실.
-        </p>
-        <div class="product-glyph">09</div>
+        <dl class="case-rows">
+          <dt>과제</dt><dd>청소년 관계 갈등을 인지행동치료(CBT) 원리로 함께 풀어 주는 상담 도구</dd>
+          <dt>구축</dt><dd>사연 속 생각의 오류를 짚는 판정·논박 흐름, 위기 신호 안전 판정, 교사 대시보드</dd>
+          <dt>결과</dt><dd>2026년 11월 납품 · 바르고 서버에서 운영 중</dd>
+        </dl>
+        <div class="product-glyph">03</div>
+      </div>
+
+      <div class="product-card case-card reveal reveal-delay-3">
+        <div class="product-card-top">
+          <span class="product-badge live">구축 중</span>
+          <span class="product-type">제조 · 비전 AI</span>
+        </div>
+        <div class="case-client">타니벤처스</div>
+        <div class="product-name">카본스캔</div>
+        <div class="product-name-sub">CarbonScan</div>
+        <dl class="case-rows">
+          <dt>과제</dt><dd>탄소섬유 복합재(CFRP) 손상을 사진만으로 빠르게 1차 진단</dd>
+          <dt>구축</dt><dd>크랙 가능성(높음·낮음·판별 불가) 판정, 사진 품질 검사, 전문가 검증 이력을 관리하는 관리자 화면</dd>
+          <dt>결과</dt><dd>시제품 운영 중 · 크랙 재현율 90%를 학습 통과 기준으로 개발</dd>
+        </dl>
+        <div class="product-glyph">04</div>
       </div>
 
     </div>
@@ -1050,7 +1112,7 @@
   <!-- 접근 방식 -->
   <section id="approach">
     <div class="approach-header">
-      <div class="section-number">04 — 프로세스</div>
+      <div class="section-number">05 — 프로세스</div>
       <h2 class="approach-title reveal">우리의 방식</h2>
     </div>
     <div class="approach-steps">
@@ -1095,7 +1157,7 @@
 
   <!-- 산업 -->
   <section id="industries">
-    <div class="section-number">05 — 적용 분야</div>
+    <div class="section-number">06 — 적용 분야</div>
     <h2 class="industries-title reveal">어떤 분야든</h2>
     <ul class="industry-list">
       <li><a class="industry-item reveal" href="manufacturing.html">
@@ -1137,7 +1199,9 @@
   <footer>
     <div class="footer-logo">BARGO<span>_AI</span></div>
     <div class="footer-info">
-      주식회사 바르고 · 대표 김선아 · 경상남도 김해시 관동로 14<br>
+      주식회사 바르고 · 대표 김선아<br>
+      경남콘텐츠기업지원센터 입주기업 · 경상남도 김해시 관동로 14<br>
+      경남관광기업지원센터 입주기업 · 경상남도 창원시 성산구 충혼로 91<br>
       <a href="mailto:m.kim@bargo.store">m.kim@bargo.store</a> · © 2026 Bargo Inc.
     </div>
     <div class="footer-sites">
