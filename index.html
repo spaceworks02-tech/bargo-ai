@@ -119,6 +119,23 @@
       overflow: hidden;
     }
 
+    #hero .hero-bg {
+      position: absolute; inset: 0;
+      background: url('assets/hero-bg.jpg') right center / cover no-repeat;
+      filter: grayscale(0.35) brightness(0.55) contrast(1.05);
+    }
+    #hero .hero-bg::after {
+      content: ''; position: absolute; inset: 0;
+      background:
+        linear-gradient(90deg, #000 0%, rgba(0,0,0,0.9) 30%, rgba(0,0,0,0.35) 60%, rgba(0,0,0,0.25) 100%),
+        linear-gradient(180deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0) 25%, rgba(0,0,0,0) 60%, #000 100%);
+    }
+    #hero .hero-tag, #hero .hero-title, #hero .hero-sub, #hero .hero-actions { position: relative; z-index: 1; }
+    #hero .scroll-hint { z-index: 1; }
+    @media (max-width: 768px) {
+      #hero .hero-bg { background-position: 70% center; }
+      #hero .hero-bg::after { background: linear-gradient(180deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.4) 35%, rgba(0,0,0,0.9) 62%, #000 100%); }
+    }
     canvas#signal {
       position: absolute;
       top: 0; left: 0;
@@ -766,6 +783,7 @@
 
   <!-- 히어로 -->
   <section id="hero">
+    <div class="hero-bg" aria-hidden="true"></div>
     <canvas id="signal"></canvas>
     <div class="hero-tag">바르고 AI — Enterprise Intelligence</div>
     <h1 class="hero-title">
