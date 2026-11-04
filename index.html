@@ -366,6 +366,7 @@
       grid-template-columns: repeat(2, 1fr);
       gap: 24px;
     }
+    .products-grid > .product-card:last-child:nth-child(odd) { grid-column: 1 / -1; }
     .product-card {
       border: 1px solid var(--gray);
       padding: 52px 48px;
@@ -420,6 +421,7 @@
     .product-link { color: inherit; text-decoration: none; transition: color 0.2s; }
     .product-link:hover { color: var(--yellow); }
     .product-link-arrow { font-size: 0.55em; color: var(--yellow); vertical-align: super; }
+    .product-partner { display: inline-block; margin: -8px 0 18px; font-size: 12px; letter-spacing: 0.04em; color: var(--yellow); border: 1px solid rgba(212,255,0,0.35); padding: 5px 10px; }
     .product-desc {
       font-size: 14px;
       color: var(--gray-light);
@@ -903,6 +905,7 @@
         </div>
         <div class="product-name">Prodec</div>
         <div class="product-name-sub">AI</div>
+        <div class="product-partner">하이퍼웍스 제휴 공급 · 나라장터 등록</div>
         <p class="product-desc">
           단순 명령 수행을 넘어 스스로 판단하고 실행하는<br>
           AI Agent 기반 지능형 비서.<br>
@@ -976,8 +979,8 @@
           <span class="product-badge dev">개발 중</span>
           <span class="product-type">비전 AI · 헬스케어</span>
         </div>
-        <div class="product-name">Harmonia</div>
-        <div class="product-name-sub">AI</div>
+        <div class="product-name">하모니아 랜드</div>
+        <div class="product-name-sub">Harmonia Land</div>
         <p class="product-desc">
           블록을 카메라로 인식해 음악으로 바꾸는<br>
           시니어 인지훈련 플랫폼.<br>
@@ -988,7 +991,7 @@
 
       <div class="product-card reveal reveal-delay-3">
         <div class="product-card-top">
-          <span class="product-badge dev">고도화 중</span>
+          <span class="product-badge">출시 완료</span>
           <span class="product-type">시계열 · 관광 데이터</span>
         </div>
         <div class="product-name">Festival Forecast</div>
@@ -999,6 +1002,22 @@
           방문객 규모를 사전에 예측해 운영을 돕습니다.
         </p>
         <div class="product-glyph">08</div>
+      </div>
+
+      <div class="product-card reveal">
+        <div class="product-card-top">
+          <span class="product-badge">납품 완료</span>
+          <span class="product-type">CBT · 청소년 상담 AI</span>
+        </div>
+        <div class="product-name">마음쌤 상담실</div>
+        <div class="product-name-sub">Maumssam</div>
+        <div class="product-partner">인제대학교 산학협력단 공동 개발</div>
+        <p class="product-desc">
+          청소년이 관계 갈등 사연을 털어놓으면<br>
+          인지행동치료(CBT) 원리로 생각의 오류를 함께 짚고<br>
+          안전 판정과 교사 대시보드로 위기를 놓치지 않는 AI 상담실.
+        </p>
+        <div class="product-glyph">09</div>
       </div>
 
     </div>
