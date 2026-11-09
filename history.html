@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="1994년 삼성전자 연구소에서 지금의 바르고 AI까지. 삼성전자 5G 데모 소프트웨어, 국제 전시·국가 행사, 공공 체험관, 현장에 납품한 AI까지 바르고 AI를 이끄는 두 사람의 실적입니다.">
+  <link rel="canonical" href="https://ai.bargo2023.co.kr/history.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="바르고 AI">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:title" content="실적 아카이브 — 바르고 AI">
+  <meta property="og:description" content="1994년 삼성전자 연구소에서 지금의 바르고 AI까지, 바르고 AI를 이끄는 두 사람의 실적입니다.">
+  <meta property="og:url" content="https://ai.bargo2023.co.kr/history.html">
+  <meta property="og:image" content="https://ai.bargo2023.co.kr/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="실적 아카이브 — 바르고 AI">
+  <meta name="twitter:description" content="1994년 삼성전자 연구소에서 지금의 바르고 AI까지, 바르고 AI를 이끄는 두 사람의 실적입니다.">
+  <meta name="twitter:image" content="https://ai.bargo2023.co.kr/og.png">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="favicon.ico" sizes="32x32">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <title>실적 아카이브 — 바르고 AI</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700;900&family=Space+Grotesk:wght@300;400;700&display=swap');
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --black: #000; --yellow: #CCFF00; --white: #F5F5F0; --gray: #444440; --gray-light: #888880; --yellow-dim: rgba(204,255,0,0.06); }
+    html { scroll-behavior: smooth; }
+    body { background: var(--black); color: var(--white); font-family: 'Noto Sans KR', sans-serif; overflow-x: hidden; word-break: keep-all; }
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; justify-content: space-between; align-items: center; padding: 20px 48px; background: rgba(0,0,0,0.95); border-bottom: 1px solid var(--gray); backdrop-filter: blur(12px); }
+    .nav-back { display: flex; align-items: center; gap: 10px; color: var(--gray-light); text-decoration: none; font-size: 13px; letter-spacing: 0.08em; transition: color 0.2s; }
+    .nav-back:hover { color: var(--yellow); }
+    .nav-logo { font-family: 'Space Grotesk', sans-serif; font-size: 18px; font-weight: 700; }
+    .nav-logo span { color: var(--yellow); }
+    .nav-cta { padding: 10px 24px; border: 1px solid var(--gray); color: var(--white); text-decoration: none; font-size: 13px; letter-spacing: 0.08em; transition: all 0.25s; }
+    .nav-cta:hover { border-color: var(--yellow); color: var(--yellow); }
+
+    #hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: flex-end; padding: 0 48px 80px; border-bottom: 1px solid var(--gray); }
+    .hero-industry { font-family: 'Space Grotesk', sans-serif; font-size: 11px; letter-spacing: 0.2em; color: var(--yellow); text-transform: uppercase; margin-bottom: 24px; }
+    .hero-title { font-size: clamp(44px, 7vw, 110px); font-weight: 900; line-height: 1.05; letter-spacing: -0.03em; margin-bottom: 40px; }
+    .hero-title em { font-style: normal; color: var(--yellow); }
+    .hero-desc { font-size: 18px; color: var(--gray-light); max-width: 640px; line-height: 1.8; font-weight: 300; }
+
+    section { padding: 120px 48px; border-bottom: 1px solid var(--gray); }
+    .section-label { font-family: 'Space Grotesk', sans-serif; font-size: 11px; letter-spacing: 0.2em; color: var(--yellow); text-transform: uppercase; margin-bottom: 56px; }
+    .section-title { font-size: clamp(28px, 3.5vw, 48px); font-weight: 900; letter-spacing: -0.03em; margin-bottom: 24px; line-height: 1.2; }
+    .section-lead { font-size: 15px; color: var(--gray-light); line-height: 1.9; max-width: 720px; margin-bottom: 56px; }
+
+    /* 숫자 */
+    .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--gray); }
+    .stat { background: var(--black); padding: 48px 32px; }
+    .stat-num { font-family: 'Space Grotesk', sans-serif; font-size: clamp(44px, 5vw, 72px); font-weight: 700; letter-spacing: -0.04em; color: var(--yellow); line-height: 1; }
+    .stat-label { font-size: 14px; font-weight: 700; margin-top: 16px; }
+    .stat-note { font-size: 12px; color: var(--gray-light); margin-top: 6px; line-height: 1.7; }
+
+    /* 팀 */
+    .team-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--gray); }
+    .member { background: var(--black); padding: 56px 44px; }
+    .member-role { font-family: 'Space Grotesk', sans-serif; font-size: 11px; letter-spacing: 0.18em; color: var(--yellow); text-transform: uppercase; margin-bottom: 16px; }
+    .member-name { font-size: 36px; font-weight: 900; letter-spacing: -0.03em; margin-bottom: 8px; }
+    .member-sub { font-size: 14px; color: var(--gray-light); margin-bottom: 32px; }
+    .member-list { list-style: none; display: flex; flex-direction: column; gap: 14px; }
+    .member-list li { display: grid; grid-template-columns: 96px 1fr; gap: 16px; font-size: 14px; line-height: 1.7; }
+    .member-list .yr { font-family: 'Space Grotesk', sans-serif; color: var(--gray-light); font-size: 13px; padding-top: 1px; }
+    .together { margin-top: 1px; background: var(--yellow-dim); border: 1px solid rgba(204,255,0,0.2); padding: 28px 44px; font-size: 15px; line-height: 1.8; }
+    .together strong { color: var(--yellow); }
+
+    /* 타임라인 */
+    .era { display: grid; grid-template-columns: 280px 1fr; gap: 64px; padding: 64px 0; border-top: 1px solid var(--gray); }
+    .era:last-child { border-bottom: 1px solid var(--gray); }
+    .era-years { font-family: 'Space Grotesk', sans-serif; font-size: 40px; font-weight: 700; letter-spacing: -0.03em; color: var(--yellow); line-height: 1.1; }
+    .era-name { font-size: 20px; font-weight: 900; margin-top: 16px; letter-spacing: -0.02em; }
+    .era-org { font-size: 13px; color: var(--gray-light); margin-top: 10px; line-height: 1.7; }
+    .works { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--gray); }
+    .work { background: var(--black); padding: 28px 28px 30px; }
+    .work.feature { grid-column: 1 / -1; background: var(--yellow-dim); }
+    .work-tag { font-family: 'Space Grotesk', 'Noto Sans KR', sans-serif; font-size: 11px; letter-spacing: 0.12em; color: var(--yellow); margin-bottom: 10px; }
+    .work-title { font-size: 17px; font-weight: 700; line-height: 1.45; margin-bottom: 8px; letter-spacing: -0.01em; }
+    .work-body { font-size: 13px; color: var(--gray-light); line-height: 1.8; }
+    .work-link { display: inline-block; margin-top: 14px; color: var(--yellow); text-decoration: none; font-size: 13px; border-bottom: 1px solid rgba(204,255,0,0.4); }
+
+    /* 고객 벽 */
+    .clients { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--gray); }
+    .client { background: var(--black); padding: 28px 24px; font-size: 15px; font-weight: 700; letter-spacing: -0.01em; }
+    .client small { display: block; font-size: 11px; font-weight: 400; color: var(--gray-light); margin-top: 6px; letter-spacing: 0.02em; }
+    .fineprint { font-size: 12px; color: var(--gray-light); line-height: 1.9; margin-top: 32px; max-width: 880px; }
+
+    #cta { text-align: center; padding: 160px 48px; }
+    .cta-title { font-size: clamp(34px, 5vw, 72px); font-weight: 900; letter-spacing: -0.03em; line-height: 1.1; margin-bottom: 48px; }
+    .cta-title em { font-style: normal; color: var(--yellow); display: block; }
+    .btn-primary { display: inline-block; padding: 20px 56px; background: var(--yellow); color: #000; font-weight: 700; font-size: 16px; letter-spacing: 0.05em; text-decoration: none; transition: opacity 0.2s; }
+    .btn-primary:hover { opacity: 0.85; }
+    .btn-ghost { display: inline-block; margin-left: 12px; padding: 19px 40px; border: 1px solid var(--gray); color: var(--white); font-size: 15px; text-decoration: none; transition: all 0.2s; }
+    .btn-ghost:hover { border-color: var(--yellow); color: var(--yellow); }
+
+    footer { padding: 36px 48px; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--gray); flex-wrap: wrap; row-gap: 24px; }
+    .footer-logo { font-family: 'Space Grotesk', sans-serif; font-size: 16px; font-weight: 700; }
+    .footer-logo span { color: var(--yellow); }
+    .footer-info { font-size: 12px; color: var(--gray-light); text-align: right; line-height: 1.8; }
+    .footer-info a { color: inherit; text-decoration: none; border-bottom: 1px solid var(--gray); transition: color 0.2s, border-color 0.2s; }
+    .footer-info a:hover { color: var(--yellow); border-color: var(--yellow); }
+    .footer-sites { width: 100%; padding-top: 20px; border-top: 1px solid #222220; font-family: 'Space Grotesk', 'Noto Sans KR', sans-serif; font-size: 12px; letter-spacing: 0.06em; color: var(--gray); line-height: 2; }
+    .footer-sites .fs-label { color: var(--gray-light); }
+    .footer-sites a { color: var(--gray-light); text-decoration: none; transition: color 0.2s; }
+    .footer-sites a:hover { color: var(--white); }
+    .footer-sites .fs-current { color: var(--yellow); }
+
+    .reveal { opacity: 0; transform: translateY(32px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    @media (max-width: 1024px) {
+      .stats { grid-template-columns: 1fr 1fr; }
+      .clients { grid-template-columns: repeat(3, 1fr); }
+      .era { grid-template-columns: 1fr; gap: 32px; }
+    }
+    @media (max-width: 768px) {
+      nav { padding: 16px 16px; }
+      .nav-logo { display: none; }
+      .nav-cta { padding: 8px 14px; font-size: 12px; }
+      #hero { padding: 100px 16px 64px; }
+      .hero-desc { font-size: 16px; }
+      section { padding: 80px 16px; }
+      .stats { grid-template-columns: 1fr 1fr; }
+      .stat { padding: 32px 20px; }
+      .team-grid { grid-template-columns: 1fr; }
+      .member { padding: 40px 24px; }
+      .member-list li { grid-template-columns: 1fr; gap: 2px; }
+      .together { padding: 24px; }
+      .works { grid-template-columns: 1fr; }
+      .clients { grid-template-columns: 1fr 1fr; }
+      .client { padding: 20px 16px; font-size: 14px; }
+      #cta { padding: 100px 16px; }
+      .btn-primary { padding: 18px 32px; }
+      .btn-ghost { margin: 12px 0 0; }
+      footer { flex-direction: column; gap: 16px; text-align: center; padding: 28px 16px; }
+      .footer-info, .footer-sites { text-align: center; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html" class="nav-back">← 바르고 AI</a>
+    <div class="nav-logo">BARGO<span>_AI</span></div>
+    <a href="https://forms.gle/xmXeqCbcqA3C251c7" target="_blank" class="nav-cta">상담 신청 →</a>
+  </nav>
+
+  <section id="hero">
+    <div class="hero-industry">Track Record — 1994 → 2026</div>
+    <h1 class="hero-title">1994년부터<br><em>현장에서 만들어 왔습니다.</em></h1>
+    <p class="hero-desc">국제 전시장의 디스플레이에서 삼성전자 5G 데모 소프트웨어, 공공 체험관, 그리고 현장에 납품한 AI까지. 바르고 AI를 이끄는 두 사람이 지나온 실적을 연대별로 정리했습니다.</p>
+  </section>
+
+  <section>
+    <div class="section-label">In Numbers</div>
+    <div class="stats">
+      <div class="stat reveal">
+        <div class="stat-num">32<span style="font-size:0.5em">년</span></div>
+        <div class="stat-label">1994 삼성전자 연구소부터</div>
+        <div class="stat-note">2008 공간제작소 → 2011 스페이스웍스 → 2023 바르고</div>
+      </div>
+      <div class="stat reveal">
+        <div class="stat-num">600<span style="font-size:0.5em">+</span></div>
+        <div class="stat-label">프로젝트·제안 기록</div>
+        <div class="stat-note">2008~2020 스페이스웍스 아카이브 기준</div>
+      </div>
+      <div class="stat reveal">
+        <div class="stat-num">60<span style="font-size:0.5em">+</span></div>
+        <div class="stat-label">삼성 계열 프로젝트</div>
+        <div class="stat-note">삼성전자·삼성SDS·삼성전기·제일기획 등</div>
+      </div>
+      <div class="stat reveal">
+        <div class="stat-num">3<span style="font-size:0.5em">건</span></div>
+        <div class="stat-label">특허 출원 (스페이스웍스)</div>
+        <div class="stat-note">디스플레이 브라켓 · 태양전지 전원 · 모바일 인맥관리</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="team">
+    <div class="section-label">Core Team</div>
+    <h2 class="section-title reveal">현장을 아는 사람과<br>보안을 아는 개발자</h2>
+    <p class="section-lead reveal">한 사람은 1994년 삼성전자 연구소에서 시작해 전시장과 체험관의 마감일을 지켜 왔고, 한 사람은 30년 동안 금융·보안 소프트웨어를 만들어 왔습니다. 두 사람은 2018년부터 한 팀입니다.</p>
+    <div class="team-grid">
+      <div class="member reveal">
+        <div class="member-role">COO · 개발운영이사</div>
+        <div class="member-name">김영철</div>
+        <div class="member-sub">삼성전자 연구소 출신 · 기획·현장 실행·AI 사업 총괄 32년</div>
+        <ul class="member-list">
+          <li><span class="yr">1994</span><span>삼성전자 연구소 입사</span></li>
+          <li><span class="yr">2008</span><span>(주)공간제작소 설립 — 전시·홍보관·디지털 디스플레이</span></li>
+          <li><span class="yr">2011</span><span>(주)스페이스웍스 설립 — 미디어·체험 콘텐츠, 소프트웨어 개발</span></li>
+          <li><span class="yr">2014–2017</span><span>삼성전자 DMC연구소 5G 데모 소프트웨어 프로젝트</span></li>
+          <li><span class="yr">2023–</span><span>(주)바르고 — Prodic AI·RockFine AI 개발, 미리내 HyperFlow 파트너십 총괄</span></li>
+        </ul>
+      </div>
+      <div class="member reveal">
+        <div class="member-role">CTO · Head of AI Development</div>
+        <div class="member-name">차현성</div>
+        <div class="member-sub">컴퓨터공학 석사 · 소프트웨어 개발 30년</div>
+        <ul class="member-list">
+          <li><span class="yr">2009–2012</span><span>코아로직 수석연구원 — 모바일 AP 임베디드 리눅스·커널 개발</span></li>
+          <li><span class="yr">2012–2013</span><span>케이사인 툴킷개발팀장 — 국정원 보안인증 툴킷, 은행 오픈뱅킹 앱</span></li>
+          <li><span class="yr">2015–2018</span><span>한컴시큐어 인증보안개발실장 — 8개 팀 44명, PKI·FIDO·블록체인 보안 제품</span></li>
+          <li><span class="yr">2018–</span><span>스페이스웍스 엔터프라이즈 플랫폼팀장 → 바르고 CTO — 클라우드·AI 시스템 개발</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="together reveal"><strong>2018년부터 한 팀.</strong> 스페이스웍스의 기획·실행력에 엔터프라이즈 보안·플랫폼 개발 역량이 더해졌고, 그 조합이 지금 바르고 AI의 납품 방식이 되었습니다.</div>
+  </section>
+
+  <section id="timeline">
+    <div class="section-label">Timeline</div>
+    <h2 class="section-title reveal">연대별 주요 실적</h2>
+    <p class="section-lead reveal">수백 건 가운데 공개 가능한 대표 프로젝트만 골랐습니다. 2020년까지의 실적은 (주)공간제작소·(주)스페이스웍스가 수행했습니다.</p>
+
+    <div class="era reveal">
+      <div>
+        <div class="era-years">2008<br>— 2013</div>
+        <div class="era-name">공간·전시·디스플레이</div>
+        <div class="era-org">(주)공간제작소 · (주)스페이스웍스</div>
+      </div>
+      <div class="works">
+        <div class="work">
+          <div class="work-tag">국제 전시</div>
+          <div class="work-title">삼성전자 IFA · CES · 지역 포럼</div>
+          <div class="work-body">IFA 2008·2010, CES 2010·2011, 라틴·구주 포럼 등 해외 전시와 제품 런칭 현장의 디스플레이·부스 구성</div>
+        </div>
+        <div class="work">
+          <div class="work-tag">국가 행사</div>
+          <div class="work-title">상하이 엑스포 2010 · 여수 엑스포 2012</div>
+          <div class="work-body">인천세계도시축전(2009), 상하이 엑스포(2010, 제일기획), 여수 엑스포(2012) 전시 콘텐츠·시설</div>
+        </div>
+        <div class="work">
+          <div class="work-tag">홍보관 · 쇼룸</div>
+          <div class="work-title">삼성전자 수원홍보관 · 코엑스 디지털 디렉토리</div>
+          <div class="work-body">삼성전자 수원홍보관(2008), 서초사옥, 코엑스 디지털 디렉토리(2010·2012), 현대모비스 김천 쇼룸</div>
+        </div>
+        <div class="work">
+          <div class="work-tag">자동차 · 제조</div>
+          <div class="work-title">만도 연구소 로비 · 쇼룸 · 모터쇼</div>
+          <div class="work-body">만도 중앙연구소 로비, 평택 쇼룸, 서울모터쇼(2009), 현대·기아 신기술부품전 등 2008~2011 연속 수행</div>
+        </div>
+        <div class="work">
+          <div class="work-tag">공공 · 상황실</div>
+          <div class="work-title">한국은행 · 국토해양부 · 방재청 · KBS</div>
+          <div class="work-body">공공기관 홍보 시설과 방재청 통합상황실, KBS 본사 상황실 영상 시스템</div>
+        </div>
+        <div class="work">
+          <div class="work-tag">특허 출원</div>
+          <div class="work-title">하드웨어 · 모바일 특허 3건</div>
+          <div class="work-body">멀티 평면 디스플레이 브라켓 시스템(2009), 태양전지 텐트용 전원공급 어셈블리(2010), 이동통신 단말기용 인맥관리 시스템(2011)</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="era reveal">
+      <div>
+        <div class="era-years">2014<br>— 2020</div>
+        <div class="era-name">미디어·체험·소프트웨어</div>
+        <div class="era-org">(주)스페이스웍스</div>
+      </div>
+      <div class="works">
+        <div class="work feature">
+          <div class="work-tag">대표 실적 · 통신 소프트웨어</div>
+          <div class="work-title">삼성전자 DMC연구소 5G 데모 소프트웨어 (2014–2017)</div>
+          <div class="work-body">5G 통신 시연용 데모(DM) 소프트웨어의 화면·내비게이션 설계부터 개발까지 4년간 수행했습니다. 2015년 KT·SK·삼성용 시연판, 2016년 기능 추가, 2017년 SKT 시연판까지 릴리스를 이어 갔습니다.</div>
+        </div>
+        <div class="work">
+          <div class="work-tag">기업 홍보관</div>
+          <div class="work-title">삼성SDS 타워 솔루션 전시관</div>
+          <div class="work-body">2014년 삼성SDS 타워 솔루션 전시관 구축, 2019·2020년 디지털 방명록</div>
+        </div>
+        <div class="work">
+          <div class="work-tag">박물관 체험</div>
+          <div class="work-title">교과서박물관 터치 체험 콘텐츠</div>
+          <div class="work-body">2015년 「바둑이와 철수」 등 옛 교과서를 터치로 체험하는 전시 앱</div>
+        </div>
+        <div class="work">
+          <div class="work-tag">박람회 · 비엔날레</div>
+          <div class="work-title">대한민국균형발전박람회 · 서울도시건축비엔날레</div>
+          <div class="work-body">2017년 국가 박람회와 비엔날레 전시, 미디어아트 전시 「그대, 나의 뮤즈 — 반 고흐 to 마티스」</div>
+        </div>
+        <div class="work">
+          <div class="work-tag">국제 대회 · 과학관</div>
+          <div class="work-title">광주세계수영선수권대회 · 국립광주과학관</div>
+          <div class="work-body">2019년 광주세계수영선수권대회, 광주국제영화제, 국립광주과학관 콘텐츠</div>
+        </div>
+        <div class="work">
+          <div class="work-tag">미디어 · 영상</div>
+          <div class="work-title">삼성전자 360 영상 · 삼성전기 · 4K 리마스터링</div>
+          <div class="work-body">Wireless Audio 360 영상(2015), 삼성전기 BAW, 4K 업스케일·화질 개선 영상</div>
+        </div>
+        <div class="work">
+          <div class="work-tag">문화 · 공공</div>
+          <div class="work-title">경기문화창조허브 · 한국문화재재단 · 미지센터</div>
+          <div class="work-body">북부·서부 경기문화창조허브(2018), 한국문화재재단·미지센터 가상체험관(2020)</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="era reveal">
+      <div>
+        <div class="era-years">2023<br>— 현재</div>
+        <div class="era-name">AI 개발·납품</div>
+        <div class="era-org">(주)바르고</div>
+      </div>
+      <div class="works">
+        <div class="work">
+          <div class="work-tag">스마트팜 · 멀티모달</div>
+          <div class="work-title">와송(주) RockFine AI</div>
+          <div class="work-body">환경 센서로 생육을 예측하는 머신러닝 엔진과 병징을 진단하는 이미지 RAG 엔진 납품</div>
+        </div>
+        <div class="work">
+          <div class="work-tag">시니어 헬스케어</div>
+          <div class="work-title">엄지하트케어 하모니아 랜드</div>
+          <div class="work-body">태블릿 인지훈련 게임과 인지 활성화 지수(CVI) 기반 조기 경보 플랫폼</div>
+        </div>
+        <div class="work">
+          <div class="work-tag">청소년 상담 · 기술이전</div>
+          <div class="work-title">인제대학교 마음쌤 상담실</div>
+          <div class="work-body">인지행동치료(CBT) 기반 갈등중재 AI 상담 앱, 대학 기술이전</div>
+        </div>
+        <div class="work">
+          <div class="work-tag">자체 제품</div>
+          <div class="work-title">Prodic AI 외 자체 제품 7종</div>
+          <div class="work-body">수요예측 Prodic, 축제 흥행예보, AI 스피커 모닥이, 영상편집기 Bargo Cut, 말로 쓰는 영농일지 등</div>
+          <a href="index.html#cases" class="work-link">구축사례 자세히 보기 →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="clients">
+    <div class="section-label">Clients &amp; Partners</div>
+    <h2 class="section-title reveal">함께 일한 곳들</h2>
+    <div class="clients reveal">
+      <div class="client">삼성전자<small>전시 · 홍보관 · 5G 데모</small></div>
+      <div class="client">삼성SDS<small>솔루션 전시관</small></div>
+      <div class="client">삼성전기<small>영상</small></div>
+      <div class="client">제일기획<small>CES · 엑스포 · 포럼</small></div>
+      <div class="client">만도<small>연구소 · 쇼룸 · 모터쇼</small></div>
+      <div class="client">현대모비스<small>쇼룸</small></div>
+      <div class="client">볼보자동차코리아<small>모터쇼</small></div>
+      <div class="client">신세계<small>매장 미디어</small></div>
+      <div class="client">한국은행<small>공공 홍보</small></div>
+      <div class="client">국토해양부<small>공공 홍보</small></div>
+      <div class="client">한국콘텐츠진흥원<small>협약 과제</small></div>
+      <div class="client">국립광주과학관<small>과학관 콘텐츠</small></div>
+      <div class="client">한국문화재재단<small>문화 콘텐츠</small></div>
+      <div class="client">교과서박물관<small>체험 콘텐츠</small></div>
+      <div class="client">인제대학교<small>AI 기술이전</small></div>
+      <div class="client">엄지하트케어 · 와송<small>AI 납품</small></div>
+    </div>
+    <p class="fineprint">2008~2020년 실적은 (주)공간제작소·(주)스페이스웍스가 수행한 것으로, 일부는 대행사를 통한 수행입니다. 고객사 내부 행사와 비공개 프로젝트는 싣지 않았습니다.</p>
+  </section>
+
+  <section id="cta">
+    <div class="cta-title reveal">이 경험을<em>귀사의 AI에 쓰겠습니다.</em></div>
+    <a href="https://forms.gle/xmXeqCbcqA3C251c7" target="_blank" class="btn-primary">무료 상담 신청 →</a>
+    <a href="index.html#cases" class="btn-ghost">AI 구축사례</a>
+  </section>
+
+  <footer>
+    <div class="footer-logo">BARGO<span>_AI</span></div>
+    <div class="footer-info">
+      주식회사 바르고 · 대표 김선아 · 경상남도 김해시 관동로 14<br>
+      <a href="mailto:m.kim@bargo.store">m.kim@bargo.store</a> · © 2026 Bargo Inc.
+    </div>
+    <div class="footer-sites">
+      <span class="fs-label">BARGO 사이트</span> ·
+      <a href="https://apps.bargo2023.co.kr">앱·게임</a> ·
+      <a href="https://books.bargo2023.co.kr">책</a> ·
+      <a href="https://webtoon.bargo2023.co.kr">웹툰</a> ·
+      <a href="https://drama.bargo2023.co.kr">드라마</a> ·
+      <a href="https://ai.bargo2023.co.kr" class="fs-current" aria-current="page">AI</a>
+    </div>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>

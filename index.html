@@ -771,6 +771,18 @@
     .footer-sites a:hover { color: var(--white); }
     .footer-sites .fs-current { color: var(--yellow); }
     @media (max-width: 768px) { .footer-sites { text-align: center; } }
+    /* 실적 아카이브 배너 */
+    .history-banner { display: grid; grid-template-columns: 1fr auto; gap: 8px 32px; align-items: center; margin-top: 1px; padding: 32px 40px; background: rgba(204,255,0,0.06); border: 1px solid rgba(204,255,0,0.25); color: var(--white); text-decoration: none; transition: border-color 0.2s, background 0.2s; }
+    .history-banner:hover { border-color: var(--yellow); background: rgba(204,255,0,0.1); }
+    .hb-label { grid-column: 1; font-family: 'Space Grotesk', sans-serif; font-size: 11px; letter-spacing: 0.2em; color: var(--yellow); text-transform: uppercase; }
+    .hb-title { grid-column: 1; font-size: 18px; font-weight: 700; line-height: 1.5; word-break: keep-all; }
+    .hb-go { grid-column: 2; grid-row: 1 / span 2; font-size: 14px; color: var(--yellow); white-space: nowrap; }
+    @media (max-width: 768px) {
+      nav a.nav-history { display: none; }
+      .history-banner { grid-template-columns: 1fr; padding: 24px; }
+      .hb-go { grid-column: 1; grid-row: auto; }
+      .hb-title { font-size: 16px; }
+    }
   </style>
 </head>
 <body>
@@ -787,6 +799,7 @@
       <a href="#services" class="nav-cta" style="border:none; padding:10px 16px;">솔루션</a>
       <a href="#products" class="nav-cta" style="border:none; padding:10px 16px;">제품</a>
       <a href="#cases" class="nav-cta" style="border:none; padding:10px 16px;">구축사례</a>
+      <a href="history.html" class="nav-cta nav-history" style="border:none; padding:10px 16px;">실적</a>
       <a href="#approach" class="nav-cta" style="border:none; padding:10px 16px;">프로세스</a>
       <a href="https://forms.gle/xmXeqCbcqA3C251c7" target="_blank" class="nav-cta">상담 신청 →</a>
     </div>
@@ -1083,6 +1096,12 @@
       </div>
 
     </div>
+
+    <a href="history.html" class="history-banner reveal">
+      <span class="hb-label">Track Record — 1994 → 2026</span>
+      <span class="hb-title">삼성전자 5G 데모부터 국가 행사, 공공 체험관까지 — 바르고 AI 팀의 실적 아카이브</span>
+      <span class="hb-go">실적 보기 →</span>
+    </a>
   </section>
 
   <div class="divider"></div>
