@@ -75,6 +75,7 @@
     .works { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--gray); }
     .work { background: var(--black); padding: 28px 28px 30px; }
     .work.feature { grid-column: 1 / -1; background: var(--yellow-dim); }
+    .work.feature .work-body { color: #C8C8C0; font-size: 14px; }
     .work-tag { font-family: 'Space Grotesk', 'Noto Sans KR', sans-serif; font-size: 11px; letter-spacing: 0.12em; color: var(--yellow); margin-bottom: 10px; }
     .work-title { font-size: 17px; font-weight: 700; line-height: 1.45; margin-bottom: 8px; letter-spacing: -0.01em; }
     .work-body { font-size: 13px; color: var(--gray-light); line-height: 1.8; }
@@ -283,6 +284,11 @@
           <div class="work-title">삼성전자 DMC연구소 5G 데모 소프트웨어 (2014–2017)</div>
           <div class="work-body">5G 통신 시연용 데모(DM) 소프트웨어의 화면·내비게이션 설계부터 개발까지 4년간 수행했습니다. 2015년 KT·SK·삼성용 시연판, 2016년 기능 추가, 2017년 SKT 시연판까지 릴리스를 이어 갔습니다.</div>
         </div>
+        <div class="work feature">
+          <div class="work-tag">대표 실적 · 금융 전시관</div>
+          <div class="work-title">부산국제금융센터 부산은행 기업홍보관 (2014–2015)</div>
+          <div class="work-body">부산 지역 기업 150개사 정보검색 터치 시스템, 40개사 기업소개 영상을 서버에서 여러 화면으로 송출하는 네트워크 플레이어, 투명 스크린, 키넥트 동작인식 게임존, 전자방명록·포토존, 관리자 모드까지 콘텐츠 및 솔루션을 일괄 납품했습니다. 2015년 기능 추가와 유지보수까지 이어 갔습니다.</div>
+        </div>
         <div class="work">
           <div class="work-tag">기업 홍보관</div>
           <div class="work-title">삼성SDS 타워 솔루션 전시관</div>
@@ -384,6 +390,7 @@
       <ul class="sw-list">
           <li><span class="sw-yr">2011</span><div><div class="sw-title">Smart Portrait(영리한 초상화)</div><div class="sw-body">관람객에게 반응하는 인터랙티브 디지털 아트 소프트웨어(Windows·Mac). 미디어아트 작가 협업</div></div></li>
           <li><span class="sw-yr">2011</span><div><div class="sw-title">현대백화점 푸드코트 터치 디스플레이</div><div class="sw-body">46인치 터치 디스플레이 케이스와 주문 안내 화면</div></div></li>
+          <li><span class="sw-yr">2014–2015</span><div><div class="sw-title">부산은행 기업홍보관 인터랙티브 시스템</div><div class="sw-body">150개사 정보검색 터치 앱, 서버·클라이언트 영상 송출 플레이어, 투명 스크린, 키넥트 동작인식 게임 3종, 전자방명록·포토존, 관리자 모드(Unity·Flash)</div></div></li>
           <li><span class="sw-yr">2014–2017</span><div><div class="sw-title">삼성전자 DMC연구소 5G 데모 소프트웨어</div><div class="sw-body">5G 시연용 데모 소프트웨어 설계·개발, KT·SK·삼성용 시연판 릴리스</div></div></li>
           <li><span class="sw-yr">2015</span><div><div class="sw-title">교과서박물관 터치 체험 앱</div><div class="sw-body">옛 교과서를 터치로 넘겨 보는 전시 체험 앱</div></div></li>
           <li><span class="sw-yr">2019 · 2020</span><div><div class="sw-title">삼성SDS 디지털 방명록</div><div class="sw-body">전시관 방문객용 디지털 방명록 시스템</div></div></li>
@@ -413,8 +420,11 @@
       <div class="client">제일기획<small>CES · 엑스포 · 포럼</small></div>
       <div class="client">만도<small>연구소 · 쇼룸 · 모터쇼</small></div>
       <div class="client">현대모비스<small>쇼룸</small></div>
+      <div class="client">현대자동차<small>전시</small></div>
+      <div class="client">LG전자<small>창이공항 미디어폴</small></div>
       <div class="client">볼보자동차코리아<small>모터쇼</small></div>
       <div class="client">신세계<small>매장 미디어</small></div>
+      <div class="client">부산은행<small>기업홍보관</small></div>
       <div class="client">한국은행<small>공공 홍보</small></div>
       <div class="client">국토해양부<small>공공 홍보</small></div>
       <div class="client">한국콘텐츠진흥원<small>협약 과제</small></div>
@@ -422,7 +432,8 @@
       <div class="client">한국문화재재단<small>문화 콘텐츠 및 솔루션</small></div>
       <div class="client">교과서박물관<small>체험 콘텐츠 및 솔루션</small></div>
       <div class="client">인제대학교<small>AI 기술이전</small></div>
-      <div class="client">엄지하트케어 · 와송<small>AI 납품</small></div>
+      <div class="client">엄지하트케어<small>AI 납품</small></div>
+      <div class="client">와송(주)<small>AI 납품</small></div>
     </div>
     <p class="fineprint">2008~2020년 실적은 (주)공간제작소·(주)스페이스웍스가 수행한 것으로, 일부는 대행사를 통한 수행입니다. 고객사 내부 행사와 비공개 프로젝트는 싣지 않았습니다.</p>
   </section>
