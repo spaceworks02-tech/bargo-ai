@@ -136,6 +136,21 @@
       footer { flex-direction: column; gap: 16px; text-align: center; padding: 28px 16px; }
       .footer-info, .footer-sites { text-align: center; }
     }
+    /* 소프트웨어 실적 */
+    .sw-group { display: grid; grid-template-columns: 280px 1fr; gap: 64px; padding: 56px 0; border-top: 1px solid var(--gray); }
+    .sw-group:last-of-type { border-bottom: 1px solid var(--gray); }
+    .sw-name { font-size: 20px; font-weight: 900; letter-spacing: -0.02em; }
+    .sw-desc { font-size: 13px; color: var(--gray-light); margin-top: 10px; line-height: 1.7; }
+    .sw-list { list-style: none; }
+    .sw-list li { display: grid; grid-template-columns: 110px 1fr; gap: 24px; padding: 18px 0; border-bottom: 1px solid #222220; }
+    .sw-list li:first-child { padding-top: 0; }
+    .sw-list li:last-child { border-bottom: none; }
+    .sw-yr { font-family: 'Space Grotesk', sans-serif; font-size: 13px; color: var(--yellow); padding-top: 2px; }
+    .sw-title { font-size: 16px; font-weight: 700; line-height: 1.5; }
+    .sw-body { font-size: 13px; color: var(--gray-light); line-height: 1.8; margin-top: 4px; }
+    .sw-tag { display: inline-block; font-size: 10px; letter-spacing: 0.08em; color: var(--gray-light); border: 1px solid var(--gray); padding: 1px 6px; margin-left: 6px; vertical-align: 2px; font-weight: 400; }
+    @media (max-width: 1024px) { .sw-group { grid-template-columns: 1fr; gap: 24px; } }
+    @media (max-width: 768px) { .sw-list li { grid-template-columns: 1fr; gap: 4px; } }
   </style>
 </head>
 <body>
@@ -179,8 +194,8 @@
 
   <section id="team">
     <div class="section-label">Core Team</div>
-    <h2 class="section-title reveal">현장을 아는 사람과<br>보안을 아는 개발자</h2>
-    <p class="section-lead reveal">한 사람은 1994년 삼성전자 연구소에서 시작해 전시장과 체험관의 마감일을 지켜 왔고, 한 사람은 30년 동안 금융·보안 소프트웨어를 만들어 왔습니다. 두 사람은 2018년부터 한 팀입니다.</p>
+    <h2 class="section-title reveal">기획하는 사람과<br>만드는 사람</h2>
+    <p class="section-lead reveal">한 사람은 1994년 삼성전자 연구소에서 시작해 전시장과 체험관의 마감일을 지켜 왔고, 한 사람은 30년 동안 보안·플랫폼 소프트웨어를 만들어 왔습니다. 두 사람은 스페이스웍스 시절부터 함께 일해 왔습니다.</p>
     <div class="team-grid">
       <div class="member reveal">
         <div class="member-role">COO · 개발운영이사</div>
@@ -197,16 +212,18 @@
       <div class="member reveal">
         <div class="member-role">CTO · Head of AI Development</div>
         <div class="member-name">차현성</div>
-        <div class="member-sub">컴퓨터공학 석사 · 소프트웨어 개발 30년</div>
+        <div class="member-sub">컴퓨터공학 석사 · 소프트웨어·AI 개발 총괄 30년</div>
         <ul class="member-list">
-          <li><span class="yr">2009–2012</span><span>코아로직 수석연구원 — 모바일 AP 임베디드 리눅스·커널 개발</span></li>
-          <li><span class="yr">2012–2013</span><span>케이사인 툴킷개발팀장 — 국정원 보안인증 툴킷, 은행 오픈뱅킹 앱</span></li>
-          <li><span class="yr">2015–2018</span><span>한컴시큐어 인증보안개발실장 — 8개 팀 44명, PKI·FIDO·블록체인 보안 제품</span></li>
-          <li><span class="yr">2018–</span><span>스페이스웍스 엔터프라이즈 플랫폼팀장 → 바르고 CTO — 클라우드·AI 시스템 개발</span></li>
+          <li><span class="yr">2009–2012</span><span>모바일 AP 칩 임베디드 리눅스 BSP·커널 개발</span></li>
+          <li><span class="yr">2012–2013</span><span>국정원 보안인증 툴킷 개발, 은행 오픈뱅킹 앱 PM</span></li>
+          <li><span class="yr">2015–2018</span><span>인증보안 개발실장 — 8개 팀 44명, PKI·FIDO·블록체인 보안 제품 개발 총괄</span></li>
+          <li><span class="yr">2018–</span><span>엔터프라이즈 플랫폼팀장 — 프라이빗 블록체인, Docker·Kubernetes 클라우드 패키지, GCP·AWS PaaS 개발</span></li>
+          <li><span class="yr">2018–2019</span><span>IITP AR·VR 스페셜리스트 과정 현장실습·멘토링</span></li>
+          <li><span class="yr">2023–</span><span>(주)바르고 CTO — AI 스피커 모닥이, 하모니아 랜드 등 AI 시스템 개발</span></li>
         </ul>
       </div>
     </div>
-    <div class="together reveal"><strong>2018년부터 한 팀.</strong> 스페이스웍스의 기획·실행력에 엔터프라이즈 보안·플랫폼 개발 역량이 더해졌고, 그 조합이 지금 바르고 AI의 납품 방식이 되었습니다.</div>
+    <div class="together reveal"><strong>오래 함께한 한 팀.</strong> 현장 기획·실행력에 엔터프라이즈 보안·플랫폼 개발 역량이 더해졌고, 그 조합이 지금 바르고 AI의 납품 방식이 되었습니다.</div>
   </section>
 
   <section id="timeline">
@@ -292,6 +309,11 @@
           <div class="work-body">Wireless Audio 360 영상(2015), 삼성전기 BAW, 4K 업스케일·화질 개선 영상</div>
         </div>
         <div class="work">
+          <div class="work-tag">정부 인재양성</div>
+          <div class="work-title">IITP 혁신성장 청년인재 집중양성</div>
+          <div class="work-body">2018~2019년 AR·VR 스페셜리스트 과정 협력기업으로 프로젝트 현장실습과 멘토링 수행</div>
+        </div>
+        <div class="work" style="grid-column:1 / -1">
           <div class="work-tag">문화 · 공공</div>
           <div class="work-title">경기문화창조허브 · 한국문화재재단 · 미지센터</div>
           <div class="work-body">북부·서부 경기문화창조허브(2018), 한국문화재재단·미지센터 가상체험관(2020)</div>
@@ -328,6 +350,56 @@
           <a href="index.html#cases" class="work-link">구축사례 자세히 보기 →</a>
         </div>
       </div>
+    </div>
+  </section>
+
+  <section id="software">
+    <div class="section-label">Software &amp; Network</div>
+    <h2 class="section-title reveal">인터넷·소프트웨어 기술 실적</h2>
+    <p class="section-lead reveal">전시 공간 뒤에는 늘 네트워크와 소프트웨어가 있었습니다. 디지털 사이니지 관리 시스템부터 공항 정보 시스템, 인터랙티브 앱, 모바일 웹까지 기술 실적만 따로 모았습니다.</p>
+    <div class="sw-group reveal">
+      <div><div class="sw-name">디지털 사이니지 · 미디어폴</div><div class="sw-desc">중앙 서버에서 원격 디스플레이로 콘텐츠를 배포·관리하는 네트워크 시스템</div></div>
+      <ul class="sw-list">
+          <li><span class="sw-yr">2008</span><div><div class="sw-title">강남대로 U-Street 미디어폴 — 삼성전자 · 삼성아이티브이</div><div class="sw-body">강남대로 디자인특화사업. LCD 미디어폴과 키오스크의 실시설계, 디스플레이 브라켓 설계, 시험 설치와 현장 설치</div></div></li>
+          <li><span class="sw-yr">2008–2011</span><div><div class="sw-title">InfoNet 디지털 사이니지 CMS</div><div class="sw-body">콘텐츠 관리 서버(CMS)·거점 중계 서버·원격 플레이어로 구성된 네트워크 사이니지 솔루션과 관리 툴. 공공기관·대학·과학관·휴게소·연구소 등에 구축·제안</div></div></li>
+          <li><span class="sw-yr">2008</span><div><div class="sw-title">영상·디스플레이 통합 시스템</div><div class="sw-body">Full HD 플레이어 구성과 전시장 영상 시스템 설계·운영안</div></div></li>
+          <li><span class="sw-yr">—</span><div><div class="sw-title">리조트 다면 디지털 광고판</div><div class="sw-body">여러 면의 광고 디스플레이를 웹·모바일과 연동해 운영하는 리조트 광고 시스템</div></div></li>
+          <li><span class="sw-yr">2010 · 2012</span><div><div class="sw-title">코엑스 디지털 디렉토리 — 삼성전자</div><div class="sw-body">터치형 디지털 안내 시스템 시공과 월 컨트롤 시스템, 유지보수(2010), 리뉴얼(2012)</div></div></li>
+          <li><span class="sw-yr">2012</span><div><div class="sw-title">LG U+ 엘리베이터 미디어보드</div><div class="sw-body">엘리베이터 내부 네트워크 광고 디스플레이 설치</div></div></li>
+      </ul>
+    </div>
+    <div class="sw-group reveal">
+      <div><div class="sw-name">공항 · 교통</div><div class="sw-desc">공항·철도 이용객 정보 시스템과 인터랙티브 광고 매체</div></div>
+      <ul class="sw-list">
+          <li><span class="sw-yr">2009</span><div><div class="sw-title">한국공항공사 공항 DID</div><div class="sw-body">공항 정보 디스플레이(DID) 함체와 LCD 스탠드 설계·제작</div></div></li>
+          <li><span class="sw-yr">2010</span><div><div class="sw-title">공항철도 인터랙티브 광고 매체</div><div class="sw-body">서울역·공덕·홍대입구·DMC 역사의 터치 반응형 광고 매체 설치 기획</div></div></li>
+          <li><span class="sw-yr">2011</span><div><div class="sw-title">싱가포르 창이공항 미디어폴·미디어월 — LG전자</div><div class="sw-body">국제 입찰용 시스템 구성과 서버 설계, 시안 작업</div></div></li>
+          <li><span class="sw-yr">2012</span><div><div class="sw-title">인천공항 테마거리 디지털 체험시설</div><div class="sw-body">공항 테마거리 디지털 체험시설 구매·설치</div></div></li>
+          <li><span class="sw-yr">2020</span><div><div class="sw-title">인천공항 T1 스마트 미디어</div><div class="sw-body">FIDS(운항정보표시) 단말 DCU 교체, T1 스마트미디어 LED 전광판, 전자지도·화상통화 안내 사이니지 기술 검토, 유심 무인 키오스크</div></div></li>
+          <li><span class="sw-yr">2020</span><div><div class="sw-title">방글라데시 공항 사이니지</div><div class="sw-body">단독형 사이니지 장비 구성 제안</div></div></li>
+      </ul>
+    </div>
+    <div class="sw-group reveal">
+      <div><div class="sw-name">터치 · 인터랙티브 소프트웨어</div><div class="sw-desc">전시장과 체험관에서 관람객이 직접 조작하는 소프트웨어</div></div>
+      <ul class="sw-list">
+          <li><span class="sw-yr">2011</span><div><div class="sw-title">Smart Portrait(영리한 초상화)</div><div class="sw-body">관람객에게 반응하는 인터랙티브 디지털 아트 소프트웨어(Windows·Mac). 미디어아트 작가 협업</div></div></li>
+          <li><span class="sw-yr">2011</span><div><div class="sw-title">현대백화점 푸드코트 터치 디스플레이</div><div class="sw-body">46인치 터치 디스플레이 케이스와 주문 안내 화면</div></div></li>
+          <li><span class="sw-yr">2014–2017</span><div><div class="sw-title">삼성전자 DMC연구소 5G 데모 소프트웨어</div><div class="sw-body">5G 시연용 데모 소프트웨어 설계·개발, KT·SK·삼성용 시연판 릴리스</div></div></li>
+          <li><span class="sw-yr">2015</span><div><div class="sw-title">교과서박물관 터치 체험 앱</div><div class="sw-body">옛 교과서를 터치로 넘겨 보는 전시 체험 앱</div></div></li>
+          <li><span class="sw-yr">2019 · 2020</span><div><div class="sw-title">삼성SDS 디지털 방명록</div><div class="sw-body">전시관 방문객용 디지털 방명록 시스템</div></div></li>
+      </ul>
+    </div>
+    <div class="sw-group reveal">
+      <div><div class="sw-name">웹 · 모바일 · 플랫폼</div><div class="sw-desc">모바일 웹·앱, 기업용 플랫폼, 기술 교육</div></div>
+      <ul class="sw-list">
+          <li><span class="sw-yr">2011</span><div><div class="sw-title">삼성전자 스마트 프레젠테이션</div><div class="sw-body">모바일 기기에서 무선으로 화면을 띄우는 프레젠테이션 솔루션 기술 조사·비교</div></div></li>
+          <li><span class="sw-yr">2012–2013</span><div><div class="sw-title">병상 단말 솔루션<span class="sw-tag">제안</span></div><div class="sw-body">안드로이드 태블릿 기반 병상 단말 솔루션 — 분당서울대병원·서울대암병원 제안</div></div></li>
+          <li><span class="sw-yr">2013</span><div><div class="sw-title">스마트앱창작터 앱 개발 강의</div><div class="sw-body">모바일 앱 UI/UX 설계와 개발 실습 과정 강의</div></div></li>
+          <li><span class="sw-yr">2018</span><div><div class="sw-title">서울광장 「우리의 빛」 모바일 웹</div><div class="sw-body">시민 참여형 행사 모바일 웹 개발</div></div></li>
+          <li><span class="sw-yr">2018–2020</span><div><div class="sw-title">엔터프라이즈 플랫폼</div><div class="sw-body">프라이빗 블록체인, Docker·Kubernetes 기반 클라우드 패키지, GCP·AWS PaaS 개발(차현성 팀)</div></div></li>
+          <li><span class="sw-yr">2018–2019</span><div><div class="sw-title">IITP 혁신성장 청년인재 집중양성 — AR·VR 스페셜리스트 과정</div><div class="sw-body">정보통신기획평가원 사업의 협력기업으로 프로젝트 현장실습과 멘토링 수행</div></div></li>
+          <li><span class="sw-yr">2020</span><div><div class="sw-title">미지센터 가상체험관 · 비대면 공연</div><div class="sw-body">온라인 가상 전시관 기획과 비대면 콘서트 제안</div></div></li>
+      </ul>
     </div>
   </section>
 
