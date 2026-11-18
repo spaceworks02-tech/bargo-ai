@@ -367,6 +367,9 @@
       gap: 24px;
     }
     .products-grid > .product-card:last-child:nth-child(odd) { grid-column: 1 / -1; }
+    .partner-header { display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; margin: 96px 0 32px; padding-top: 40px; border-top: 1px solid var(--gray); }
+    .partner-title { margin: 0; font-size: clamp(22px, 2.6vw, 30px); font-weight: 900; letter-spacing: -0.02em; }
+    .partner-subtitle { margin: 0; font-size: 13px; color: var(--gray-light); line-height: 1.9; }
     .product-card {
       border: 1px solid var(--gray);
       padding: 52px 48px;
@@ -655,6 +658,7 @@
         margin-bottom: 48px;
       }
       .products-subtitle { text-align: left; max-width: 100%; }
+      .partner-header { flex-direction: column; align-items: flex-start; gap: 8px; margin-top: 64px; }
       .products-grid {
         grid-template-columns: 1fr;
       }
@@ -922,16 +926,16 @@
 
       <div class="product-card reveal reveal-delay-1">
         <div class="product-card-top">
-          <span class="product-badge">출시 완료</span>
-          <span class="product-type">AI Agent · 지능형 비서</span>
+          <span class="product-badge live">데모 운영</span>
+          <span class="product-type">AI Agent · 경영지원</span>
         </div>
-        <div class="product-name">Prodec</div>
+        <div class="product-name"><a class="product-link" href="https://apps.bargo2023.co.kr/#apps" target="_blank" rel="noopener">Prodec <span class="product-link-arrow">↗</span></a></div>
         <div class="product-name-sub">AI</div>
-        <div class="product-partner">하이퍼웍스 제휴 공급 · 나라장터 등록</div>
+        <div class="product-partner">바르고 자체 개발</div>
         <p class="product-desc">
-          단순 명령 수행을 넘어 스스로 판단하고 실행하는<br>
-          AI Agent 기반 지능형 비서.<br>
-          업무와 의사결정을 능동적으로 지원합니다.
+          공문·보고서 초안을 한글(hwpx)로 만들고, 규정을 근거로 답하고,<br>
+          지출 내역을 점검하고, 회의록을 정리하는 경영지원 AI 에이전트.<br>
+          필요한 업무는 지침만 적어 나만의 에이전트로 만듭니다.
         </p>
         <div class="product-glyph">02</div>
       </div>
@@ -1011,6 +1015,28 @@
         <div class="product-glyph">07</div>
       </div>
 
+    </div>
+
+    <div class="partner-header reveal">
+      <h3 class="partner-title">제휴 공급</h3>
+      <p class="partner-subtitle">바르고가 공식 파트너로 공급·구축하는 제품입니다.</p>
+    </div>
+    <div class="products-grid">
+      <div class="product-card reveal">
+        <div class="product-card-top">
+          <span class="product-badge">제휴 공급</span>
+          <span class="product-type">AI 오케스트레이션 · 노코드 워크플로우</span>
+        </div>
+        <div class="product-name">HyperWorks</div>
+        <div class="product-name-sub">by 미리내테크놀로지스</div>
+        <div class="product-partner">미리내 제휴 공급 · 나라장터 등록</div>
+        <p class="product-desc">
+          여러 LLM을 쓰는 슈퍼챗부터 에이전트, 노드 기반 워크플로우, 배포·운영 관리까지<br>
+          하나로 잇는 풀스택 AI 워크스페이스.<br>
+          조직 단위 권한·사용량 관리로 전사 AI 도입을 돕습니다.
+        </p>
+        <div class="product-glyph">P1</div>
+      </div>
     </div>
   </section>
 
